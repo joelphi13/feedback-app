@@ -7,13 +7,13 @@ import FeedbackList from "./components/FeedbackList";
 import FeedbackData from "./data/FeedbackData";
 
 function App() {
-  const [feedback, setFeedback] = useState(FeedbackData);
+  const [feedbacks, setFeedbacks] = useState(FeedbackData);
 
   return (
     <div>
       <Header />
       <div className="container">
-        <FeedbackList />
+        <FeedbackList feedbacks={feedbacks} />
       </div>
     </div>
   );
