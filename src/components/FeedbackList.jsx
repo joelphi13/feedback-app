@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({ feedbacks }) {
+function FeedbackList({ feedbacks, handleDelete }) {
   if (!feedbacks || feedbacks.length === 0) {
     return <p>No Feedback Yet</p>;
   }
@@ -16,6 +16,7 @@ function FeedbackList({ feedbacks }) {
             id={feedback.id}
             rating={feedback.rating}
             text={feedback.text}
+            handleDelete={handleDelete}
           />
         );
       })}
